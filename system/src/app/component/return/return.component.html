@@ -1,0 +1,76 @@
+<!-- <div class="card-table">
+    <div >
+        <table class="table table responsive">
+        <thead>
+            
+            <tr>
+                <th><strong>Sr.No</strong></th>
+                <th><strong>Student Name</strong></th>
+                <th><strong>Book Taken</strong></th>
+                </tr>
+                
+            <tr>
+                
+                <th>1</th>
+                <th>Nora Jayan</th>
+</tr>
+            <tr>
+                <th>2</th>
+                <th>Chitra Ramachandran</th>
+                </tr>
+            </thead>
+        <tbody>
+        </tbody>
+    </table>
+    </div>
+</div> -->
+<div class="alignned" >
+    <br>
+        <strong>        RETURNED BOOK LIST</strong>  
+        <strong class="divs" [routerLink]="['/librarianmenu']"  ><img style="width: 25px; margin-top: 5px;" src="https://cdn4.vectorstock.com/i/1000x1000/84/88/home-icon-mobile-app-and-web-site-start-main-page-vector-23828488.jpg"alt=> </strong>
+
+    </div>
+    <div class="card-table"> 
+    
+       
+     
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="5" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+      </svg>     -->
+    <table class="table table-striped">
+        <thead>
+            <tr >
+                <th><strong>Student Id</strong></th>
+                <th><strong>Student Name</strong></th>
+                <th><strong>Book Taken</strong></th>
+                <th><strong>Date</strong></th>
+                </tr>
+                <tr *ngFor="let item of productdata ">
+                <td>{{item.studentid}}</td>
+                    <td>{{item.fullname}}</td>
+                    <td>{{item.bookname}}</td>
+                    <td>{{item.date}}</td>
+    
+    </tr>
+        </thead>
+        <tbody>
+    
+    </tbody>
+    </table>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
+                
+    
+    
+    
+    

@@ -1,0 +1,73 @@
+<!-- <div class="card-table">
+    <div >
+        <table class="table table responsive">
+        <thead>
+            
+            <tr>
+                <th><strong>Sr.No</strong></th>
+                <th><strong>Student Name</strong></th>
+                <th><strong>Book Taken</strong></th>
+                </tr>
+                
+            <tr>
+                
+                <th>1</th>
+                <th>Nora Jayan</th>
+</tr>
+            <tr>
+                <th>2</th>
+                <th>Chitra Ramachandran</th>
+                </tr>
+            </thead>
+        <tbody>
+        </tbody>
+    </table>
+    </div>
+</div> -->
+
+
+<div class="card-table">   
+
+<!-- <h2 class="align">Enrolled Students in Library</h2>    -->
+<div class="alignned" >
+
+  <br>
+
+    <strong>  Enrolled Students in Library      </strong>     
+    <strong class="divs" [routerLink]="['/librarianmenu']"  ><img style="width: 25px; margin-top: 5px;" src="https://cdn4.vectorstock.com/i/1000x1000/84/88/home-icon-mobile-app-and-web-site-start-main-page-vector-23828488.jpg"alt=> </strong>
+    </div>
+    <table class="table table responsive">
+        <thead>
+            <tr>
+                <th><strong>Student Id</strong></th>
+                <th><strong>Student Name</strong></th>
+                <th><strong>Email</strong></th>
+                <th><strong>Mobile Number</strong></th>
+                
+                </tr>
+                <tr *ngFor="let item of productdata ">
+                <td>{{item.studentid}}</td>
+                    <td>{{item.fullname}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.mobile}}</td>
+    </tr>
+        </thead>
+        <tbody>
+</tbody>
+    </table>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+    
+        
+                
+    
+    
+    

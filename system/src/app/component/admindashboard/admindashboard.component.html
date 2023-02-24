@@ -1,0 +1,49 @@
+<h6 class="divs" [routerLink]="['/admin']"  ><img style="width: 25px; margin-top: 5px;" src="https://th.bing.com/th/id/OIP.0mrqOxepIamnbyCNaGxOqAHaHj?w=185&h=189&c=7&r=0&o=5&pid=1.7"alt=> Logout</h6>
+<ng-container *ngIf="products.length !=0">
+    <!-- Show book in library -->
+    <div class="card-table">
+        <div >
+            <table class="table table responsive">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                    <th>Department</th>
+                    <th>Available Count</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of products;let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{item.title}}</td>
+                    <td><img style="width: 100px;" src="{{item.images}}" alt=""></td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.department}}</td>
+                    <td>{{item.count}}</td>
+                    <td><button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
+                </tr>
+                <tr>
+                    <td colspan="4"></td>
+                    <td><button (click)="emptyProduct()" class="btn btn-danger">Delete</button></td>
+                    <td><button routerLink="/products"class="btn btn-primary">Add</button></td>
+                    </tr>  
+            </tbody>
+</table>
+        </div>
+    </div>
+</ng-container>
+<!-- No book in library -->
+<ng-container *ngIf="products.length==0">
+    <div class="container">
+        <div class="center">
+            <img src="https://th.bing.com/th/id/OIP.IwBSEqJBRMrltwGE_WwszAHaEK?w=275&h=180&c=7&r=0&o=5&pid=1.7" alt="">
+            <h5>There is no book in your library </h5>
+           <button routerLink="/products"class="btn btn-primary">Add Book</button>
+        </div>
+    </div>
+</ng-container>
+
+

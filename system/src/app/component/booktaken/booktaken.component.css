@@ -1,0 +1,31 @@
+.center{
+    position: absolute;
+    top: 250px;
+    left:40%;
+    text-align: center;
+}
+.card-table{
+    border: 1px solid rgba(0,0, 0, 2);
+   text-indent: 100px;
+}
+.div{
+    column-span: 5000;
+}
+.align{
+    padding-left: 25%;
+}
+.center{
+    align-items: center;
+}
+.margin-left{
+    margin-left: 1010px !important;
+}
+.alignned{
+background-color: aliceblue;
+}
+.divs
+{
+    padding-left: 1085px;
+}
+
+

@@ -1,0 +1,58 @@
+<a><input type="search" id ="form1" placeholder="search" [(ngModel)]="searchTerm" ></a>
+<strong class="divs" [routerLink]="['/librarianmenu']"  ><img style="width: 25px; margin-top: 5px;" src="https://cdn4.vectorstock.com/i/1000x1000/84/88/home-icon-mobile-app-and-web-site-start-main-page-vector-23828488.jpg"alt=> </strong>
+<ng-container *ngIf="products.length !=0">
+    <!-- show book in library -->
+    <div class="card-table">
+        <div >
+            <table class="table table responsive">
+            <thead>
+                <tr>
+                <th>Id</th>
+                    <th>Title</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                    <th>Department</th>
+                    <th>Available Count</th>
+                    <th>Issue</th>
+                    <th>Return</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of products | filter:searchTerm">
+                    <td>{{item.id}}</td>
+                    <td>{{item.title}}</td>
+                    <td><img style="width: 100px;" src="{{item.images}}" alt=""></td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.department}}</td>
+                    <td>{{item.count}}</td>
+                    <td><button (click)="getcount(item)" class="btn btn-success">Issue</button></td>
+                          <td><button (click)="getrecount(item)" class="btn btn-success">Return</button></td>
+                          <td ><button *ngIf="item.count<=0"  >
+                            <p style=color:green><strong>{{message}}</strong></p>
+                        </button>
+                        <button *ngIf="item.count>0" >
+                            <p style=color:green><strong>{{msg}}</strong></p>
+                        </button>
+                        </td>
+                          </tr>
+                        </tbody>
+        </table>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="products.length==0">
+    <!-- if no book in library -->
+    <div class="container">
+        <div class="card">
+        </div>
+        <div class="center">
+            <img src="https://th.bing.com/th/id/OIP.IwBSEqJBRMrltwGE_WwszAHaEK?w=275&h=180&c=7&r=0&o=5&pid=1.7" alt="">
+            <h5>There is no book in your library </h5>
+            <h6>Sorry</h6>
+            </div>
+    </div>
+    </ng-container>
+
+
+
